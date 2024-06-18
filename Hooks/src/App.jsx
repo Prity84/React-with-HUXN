@@ -1,10 +1,18 @@
-
+import { useState } from "react";
 
 function App() {
+
+  const [color, Setcolor] = useState('Red')
+  
+
+
+  const changeColor =()=>{
+    Setcolor('Blue')
+  }
   return (
     <>
-      <h1>Hooks</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cumque.</p>
+      <h1>my favourite color is {color}</h1>
+      <button onClick={changeColor}>Blue</button>
     </>
   );
 }
