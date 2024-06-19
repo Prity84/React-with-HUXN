@@ -1,0 +1,11 @@
+It allows to perform side effect in our components.
+Example: 
+Fetching data from Api,
+Directly updating Dom,
+Timer's like setTimeOut and setInterval
+
+
+Three ways to use 
+1. Without any dependencies
+2. With dependencies using Empty Array
+3. With variables
