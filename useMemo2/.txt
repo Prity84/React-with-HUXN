@@ -1,0 +1,5 @@
+use ref is a react hook that allow us to create mutable variables, which will not re-render the component.
+useref is also used for accessing DOM elements.
+
+useState it self causes re-render
+useref does not re-render the component when it change.

@@ -1,0 +1,8 @@
+UseMemo and useCallback Hooks are similar. the main difference is:
+-useMemo returns a memoized value.
+-useCallback returns a memoized function.
+
+when webpage re-render it again calculating the web page and calculating qube to 
+remove this we use usememo
+
+this improve the performance of application.
