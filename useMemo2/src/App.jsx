@@ -1,38 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 
 function App() {
-  const [value, Setvalue] = useState(0);
-  // const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  // useEffect(()=>{
-  //   setCount(prev => prev+1)
-  // })
-
-  const count = useRef(0);
-
-  useEffect(()=>{
-    count.current = count.current + 1
-  })
+  const expensiveCalculation = useMemo(() => {
+    console.log("Running expensive calculation...");
+    let result = 0;
+    for (let i = 0; i <= count * 1000000; i++) {
+      result += i;
+    }
+    return result;
+  }, [count]);
 
   return (
     <>
-      <h1></h1>
-      <button
-        onClick={() => {
-          Setvalue((prev) => prev - 1);
-        }}
-      >
-        -1
-      </button>
-      <h2>{value}</h2>
-      <button
-        onClick={() => {
-          Setvalue((prev) => prev + 1);
-        }}
-      >
-        +1
-      </button>
-      <h1>Render count: {count.current} </h1>
+      <h2>Expensive Component</h2>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <p>Result of expensive calculation: {expensiveCalculation}</p>
     </>
   );
 }

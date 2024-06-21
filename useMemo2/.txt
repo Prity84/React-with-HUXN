@@ -1,5 +1,13 @@
-use ref is a react hook that allow us to create mutable variables, which will not re-render the component.
-useref is also used for accessing DOM elements.
+useState: We start with a state variable count initialized to 0, which will be used to trigger updates and recompute the expensive calculation.
 
-useState it self causes re-render
-useref does not re-render the component when it change.
+useMemo: The useMemo hook takes two arguments:
+
+A function that performs the expensive calculation (() => { ... }).
+An array of dependencies ([count]), which specifies when the memoized value (expensiveCalculation) should be recomputed. If any value in the dependency array changes, the memoized value will be recalculated.
+Expensive Calculation: In this example, the expensive calculation is simulated using a loop that runs count * 1,000,000 iterations. This is an exaggerated example to demonstrate when useMemo would be beneficial — in real scenarios, this could represent complex computations or data transformations.
+
+Rendering: The result of the expensive calculation (expensiveCalculation) is displayed in the component JSX. When the count state changes (by clicking the "Increment Count" button), React will only recompute expensiveCalculation if count has changed, thanks to the dependency array [count].
+
+When to Use useMemo:
+1. Performance Optimization:
+2. Avoiding Unnecessary Recalculations:
