@@ -5,7 +5,7 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   //usecallback not create another fun cache fun in memory store
-  const newFn = useCallback(() => {}, []);
+  const newFn = useCallback((counter) => {}, [counter]);
 
   return (
     <>
