@@ -1,0 +1,13 @@
+useContext is a react hook that allow allows us to access data from any component without explicitly 
+passing it down through props at every level.
+
+it is use to manage gloal data into react.
+
+Context API is used to manage state in react.
+
+Context API is used to share any kind of data including object, function, array, makes it flexible solution 
+to mange variety of needs ,
+most common use to share the current theme of application with all its component to share 
+the  authenticated user of all our component in our application  and to share the result of api  call
+with all our component in our application that will reduce the API call.
+

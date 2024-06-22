@@ -1,3 +1,0 @@
-usecallback is a react hook that lets you cache a function definition between re-frenders.
-It means , when we use the useCallback Hook, It doesn't create multiple instance of same function when re-render 
-happens .Instead of creating new instance of the function , it provides the cached function on re-render of the component.
