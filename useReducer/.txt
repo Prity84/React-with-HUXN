@@ -1,0 +1,14 @@
+useReducer
+
+similiar to useState  , useState provider state and setterfun, while this provides 
+state and Dispatch function.
+
+The useReducer  Hook accept two arguments:
+1. Reducer function
+2. Initial function
+
+and returns : Current state and Dispatch  method
+
+The reducer function specified how the state gets updated.
+
+returns one array same as useState hhok
